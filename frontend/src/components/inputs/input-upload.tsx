@@ -12,7 +12,7 @@ import {
 import { useState, useRef } from "react";
 import { Upload, File, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
-import { InputUploadProps } from "../../../types/input-types";
+import { InputUploadProps } from "../../types/input-types";
 
 export function InputUpload({
   label,
