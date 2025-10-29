@@ -1,4 +1,4 @@
-import { InputFieldProps } from "../../../types/input-types";
+import { InputFieldProps } from "../../types/input-types";
 import {
   FormControl,
   FormField,

@@ -1,5 +1,5 @@
 "use client";
-import { Calendar, Home, Ticket } from "lucide-react";
+import { Calendar, Home, Settings, Ticket } from "lucide-react";
 
 import {
   Sidebar,
@@ -51,6 +51,11 @@ export function AppSidebar() {
       title: "Electrical Parameter",
       url: "/electrical-parameter",
       icon: Calendar,
+    },
+    {
+      title: "Output",
+      url: "/output",
+      icon: Settings,
     },
   ];
   return (

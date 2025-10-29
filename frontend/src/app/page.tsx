@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { api } from "@/services/api";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
+import { AppSidebar } from "@/components/sidebar/app-sidebar";
 import { ModeToggle } from "@/components/toggle-mode-button";
 import { Button } from "@/components/ui/button";
 import {

@@ -14,7 +14,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { InputDropdownProps } from "../../../types/input-types";
+import { InputDropdownProps } from "../../types/input-types";
 
 export function InputDropdown({
   label,

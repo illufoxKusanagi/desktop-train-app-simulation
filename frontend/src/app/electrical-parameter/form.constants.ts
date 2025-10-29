@@ -1,5 +1,5 @@
 import z from "zod";
-import { InputType } from "../../../types/input-types";
+import { InputType } from "../../types/input-types";
 
 const chunkArray = <T>(array: T[], chunkSize: number): T[][] => {
   const chunks: T[][] = [];
