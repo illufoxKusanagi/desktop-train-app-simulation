@@ -1,5 +1,5 @@
 "use client";
-import { Calendar, Home, Settings, Ticket } from "lucide-react";
+import { Calendar, Home, Network, Settings, Ticket } from "lucide-react";
 
 import {
   Sidebar,
@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { CardDescription } from "../ui/card";
 
 export function AppSidebar() {
   const { open } = useSidebar();
@@ -64,13 +65,34 @@ export function AppSidebar() {
         size={"lg"}
         className={cn("absolute", open ? "top-6 left-6" : "top-4 left-4")}
       />
-
-      <SidebarContent
+      <SidebarHeader
         className={cn(
-          "flex flex-col gap-4 transition-all duration-300",
-          open ? "px-4 pt-16" : "pt-11"
+          "overflow-hidden transition-all duration-500 ease-in-out",
+          open
+            ? "px-4 pt-4 block opacity-100"
+            : "px-2 pt-4 flex items-center justify-center opacity-100"
         )}
       >
+        <SidebarMenu>
+          <SidebarMenuButton asChild className="hover:bg-accent/50 h-full">
+            {open ? (
+              <div className="flex items-center gap-3 w-full px-2 mt-16">
+                <Network className="h-6 w-6 text-primary-600 dark:text-primary-300 shrink-0" />
+                <div className="flex flex-col items-start overflow-hidden">
+                  <p className="body-big-bold text-primary-600 dark:text-primary-300 truncate">
+                    Train Simulation App
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center justify-center w-full mt-11">
+                <Network className="h-6 w-6 text-primary-600 dark:text-primary-300" />
+              </div>
+            )}
+          </SidebarMenuButton>
+        </SidebarMenu>
+      </SidebarHeader>
+      <SidebarContent className="flex flex-col gap-4 transition-all duration-500 ease-in-out">
         <SidebarMenu>
           <SidebarGroup>
             <SidebarGroupContent className="space-y-1">
